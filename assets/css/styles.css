@@ -121,8 +121,10 @@ img{
 
 model-viewer {
   overflow-x: hidden;
+  text-align: center;
   width: 500px;
   height: 500px;
+  margin-right: 10px;
 }
 
 /*=============== THEME ===============*/
@@ -331,7 +333,6 @@ the website, in dark theme
 }
 
 .home__img{
-  width: 200px;
   justify-self: center;
 }
 
@@ -628,6 +629,7 @@ the website, in dark theme
 .objectiveOdsText {
   display: flex;
   flex-direction: column;
+  max-height: 100%;
 }
 
 .questions__container{
@@ -927,15 +929,12 @@ the website, in dark theme
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 320px){
+@media screen and (max-width: 350px){
   .container{
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
 
-  .home__img{
-    width: 180px;
-  }
   .home__title{
     font-size: var(--h1-font-size);
   }
@@ -950,6 +949,9 @@ the website, in dark theme
   .product__container{
     grid-template-columns: .6fr;
     justify-content: center;
+  }
+  .about__title{
+    max-width: 300px;
   }
 }
 
@@ -970,6 +972,60 @@ the website, in dark theme
 
   .footer__subscribe{
     width: 400px;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .about__description {
+    width: 90%;
+  }
+
+  .container {
+    max-width: 95%;
+    margin: .8rem;
+  }
+}
+
+@media screen and (max-width: 486px){
+  .about__description {
+    width: 75%;
+  }
+  .home__description {
+    width: 390px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  model-viewer {
+    width: 400px;
+    height: 400px;
+  }
+  .odsTitleContainer {
+    max-width: 360px !important;
+  }
+  .odsImg img {
+    max-width: 140px;
+  }
+  .questions__title {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 386px){
+  .about__description {
+    width: 90%;
+  }
+  .about__title{
+    width: 380px;
+  }
+  .odsTitleContainer {
+    max-width: 350px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .questions__objective {
+    width: 95%;
   }
 }
 
@@ -1009,7 +1065,6 @@ the website, in dark theme
     align-items: center;
   }
   .home__img{
-    width: 280px;
     order: 1;
   }
   .home__social{
@@ -1025,6 +1080,90 @@ the website, in dark theme
   }
   .footer__subscribe{
     width: initial;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .questions__title {
+    font-size: 1.5rem !important;
+  }
+  .questions__objective {
+    width: 70%;
+  }
+  .odsImg img {
+    width: 400px;
+  }
+  .odsTitleContainer {
+    gap: 1rem;
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .questions__title {
+    font-size: 1.5rem !important;
+    width: 60%;
+  }
+  .questions__objective {
+    width: 60%;
+  }
+  .odsTitleContainer {
+    gap: 1rem;
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .questions__title {
+    font-size: 1.5rem !important;
+    width: 100%;
+    text-align: center;
+  }
+  .questions__objective {
+    width: 100%;
+    text-align: center;
+  }
+  .odsTitleContainer {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto !important;
+    padding: 0 1rem;
+  }
+  .odsImg img {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  .odsTitleContainer {
+    max-width: 550px;
+  }
+  .odsImg img {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .odsTitleContainer {
+    max-width: 500px;
+  }
+  .odsImg img {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .odsTitleContainer {
+    max-width: 415px;
+  }
+  .odsImg img {
+    max-width: 170px;
+  }
+  .questions__title {
+    font-size: 1.2rem !important;
+  }
+  .questions__objective {
+    font-size: 14px !important;
   }
 }
 
@@ -1044,11 +1183,9 @@ the website, in dark theme
   }
 
   .home{
-    padding: 9rem 0 5rem;
+    padding: 10rem 0 5rem;
   }
-  .home__img{
-    width: 350px;
-  }
+
   .home__description{
     padding-right: 7rem;
   }
