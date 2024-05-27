@@ -13,6 +13,10 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
+        <!--=============== Animation 3D ===============-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
         <title>Leitura Sustentável</title>
     </head>
     <body>
@@ -62,7 +66,9 @@
             <!--==================== HOME ====================-->
             <section class="home" id="home">
                 <div class="home__container container grid">
-                    <img src="assets/img/home.png" alt="" class="home__img">
+                    <div class="cta home__img">
+                        <model-viewer src="assets/img/scene.gltf" camera-controls camera-orbit="45deg 50deg" disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
+                    </div>
 
                     <div class="home__data">
                         <h1 class="home__title">
@@ -640,5 +646,12 @@
         
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+
+        <!--=============== Animation 3D ===============-->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

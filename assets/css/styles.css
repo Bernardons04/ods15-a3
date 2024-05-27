@@ -119,6 +119,12 @@ img{
   }
 }
 
+model-viewer {
+  overflow-x: hidden;
+  width: 500px;
+  height: 500px;
+}
+
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
@@ -316,7 +322,7 @@ the website, in dark theme
 
 /*=============== HOME ===============*/
 .home{
-  padding: 3.5rem 0 2rem;
+  padding: 2rem 0 2rem;
 }
 
 .home__container{
@@ -469,7 +475,7 @@ the website, in dark theme
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   padding-top: 1rem;
 }
@@ -1038,7 +1044,7 @@ the website, in dark theme
   }
 
   .home{
-    padding: 13rem 0 5rem;
+    padding: 9rem 0 5rem;
   }
   .home__img{
     width: 350px;
