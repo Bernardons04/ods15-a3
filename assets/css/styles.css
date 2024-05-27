@@ -47,7 +47,7 @@
 }
 
 /* Responsive typography */
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 1000px) {
   :root {
     --big-font-size: 3.2rem;
     --h1-font-size: 2.25rem;
@@ -185,7 +185,7 @@ the website, in dark theme
 }
 
 .container{
-  max-width: 968px;
+  max-width: 1000px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -466,7 +466,11 @@ the website, in dark theme
 }
 
 .steps__container{
-  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   padding-top: 1rem;
 }
 
@@ -476,8 +480,10 @@ the website, in dark theme
 
 .steps__card{
   background-color: var(--container-color);
-  padding: 2.5rem 3rem 2rem 1.5rem;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
   border-radius: 1rem;
+  width: 290px;
+  cursor: pointer;
 }
 
 .steps__card-number{
@@ -603,7 +609,7 @@ the website, in dark theme
 .odsTitleContainer {
   display: flex;
   gap: 2rem;
-  width: 968px;
+  width: 1000px;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
