@@ -785,6 +785,7 @@ the website, in dark theme
   left: 0;
   font-size: var(--smaller-font-size);
   z-index: 10;
+  color: var(--first-color);
 }
 
 /*Input focus sticky top label*/
@@ -792,6 +793,7 @@ the website, in dark theme
   top: -.75rem;
   font-size: var(--smaller-font-size);
   z-index: 10;
+  color: var(--first-color);
 }
 
 /*=============== FOOTER ===============*/
