@@ -432,6 +432,8 @@ the website, in dark theme
 
 .about__title{
   margin-bottom: var(--mb-1);
+  text-align: start;
+  width: 500px;
 }
 
 .about__description{
