@@ -344,6 +344,7 @@ the website, in dark theme
 
 .home__description{
   margin-bottom: var(--mb-2-5);
+  text-align: justify;
 }
 
 .home__social{
@@ -445,6 +446,7 @@ the website, in dark theme
 
 .about__description{
   margin-bottom: var(--mb-2);
+  text-align: justify;
 }
 
 .about__details{
@@ -467,7 +469,7 @@ the website, in dark theme
 
 /*=============== STEPS ===============*/
 .steps__bg{
-  background-color: var(--first-color);
+  background-color: var(--first-color-alt);
   padding: 3rem 2rem 2rem;
   border-radius: 1rem;
 }
@@ -511,6 +513,7 @@ the website, in dark theme
 
 .steps__card-description{
   font-size: var(--small-font-size);
+  text-align: justify;
 }
 
 .steps__card:hover .steps__card-number{
@@ -619,6 +622,10 @@ the website, in dark theme
   width: 1000px;
   margin: 0 auto;
   margin-bottom: 2rem;
+}
+
+.questions__objective {
+  text-align: justify;
 }
 
 .questions__title {
