@@ -471,7 +471,7 @@ the website, in dark theme
 
 /*=============== STEPS ===============*/
 .steps__bg{
-  background-color: var(--first-color-alt);
+  background-color: var(--first-color-lighten);
   padding: 3rem 2rem 2rem;
   border-radius: 1rem;
 }
@@ -486,7 +486,7 @@ the website, in dark theme
 }
 
 .steps__title{
-  color: #FFF;
+  color: var(--tex);
 }
 
 .steps__card{
@@ -497,26 +497,205 @@ the website, in dark theme
   cursor: pointer;
 }
 
-.steps__card-number{
+
+
+
+
+
+
+.card {
+  overflow: visible;
+  cursor: pointer;
+}
+
+.content {
+  width: 250px;
+  height: 304px;
+  transform-style: preserve-3d;
+  transition: transform .2s;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.front,
+.back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, var(--first-color), var(--first-color), var(--first-color), var(--first-color), transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 97%;
+  height: 97%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.back-content strong {
   display: inline-block;
-  background-color: var(--first-color-alt);
+  background-color: var(--first-color);
   color: #FFF;
   padding: .5rem .75rem;
   border-radius: .25rem;
-  font-size: var(--h2-font-size);
-  margin-bottom: var(--mb-1-5);
-  transition: .3s;
+  font-size: var(--big-font-size);
+  font-family: 'Nunito', sans-serif;
 }
 
-.steps__card-title{
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
+.card:hover .content {
+  transform: rotateY(180deg);
 }
 
-.steps__card-description{
-  font-size: var(--small-font-size);
-  text-align: justify;
+@keyframes rotation_481 {
+  0% {
+      transform: rotateZ(0deg);
+  }
+
+  0% {
+      transform: rotateZ(360deg);
+  }
 }
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+  font-size: 1.2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.title {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;   
+  background: var(--first-color);
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background: radial-gradient(#b0e633, #53ef7d);
+  left: 100px;
+  top: 20px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background: var(--first-color-alt);
+  left: 160px;
+  top: -50px;
+  width: 60px;
+  height: 60px;
+  animation-delay: -1800ms;
+}
+
+
+@keyframes floating {
+  0% {
+      transform: translateY(0px);
+  }
+
+  50% {
+      transform: translateY(10px);
+  }
+
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .steps__card:hover .steps__card-number{
   transform: translateY(-.25rem);
