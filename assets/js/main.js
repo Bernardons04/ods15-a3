@@ -134,12 +134,10 @@ const getImgTheme = () => {
         divOdsImg.classList.add(darkModeImg)
         divOdsImg.classList.remove(lightModeImg)
         divOdsImg.src = srcDark
-        console.log(darkModeImg)
     } else {
         divOdsImg.classList.remove(darkModeImg)
         divOdsImg.classList.add(lightModeImg)
         divOdsImg.src = srcLight
-        console.log(lightModeImg)
     }
 }
 
