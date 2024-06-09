@@ -6,7 +6,7 @@ document.querySelectorAll('.card').forEach(card => {
     const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
 
     const rotateX = y * 20; // Ajuste a intensidade conforme necessário
-    const rotateY = x * 20;  // Ajuste a intensidade conforme necessário
+    const rotateY = x * 40;  // Ajuste a intensidade conforme necessário
 
     front.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) rotateY(180deg)`;
   });
