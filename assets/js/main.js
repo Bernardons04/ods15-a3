@@ -116,6 +116,7 @@ const formGetBook = document.getElementById("lead__button")
 let inputName = document.getElementById('inputName');
 let inputEmail = document.getElementById('inputEmail');
 let inputTel = document.getElementById('inputTel');
+let btnBack = document.getElementById('btnBack')
 
 formGetBook.addEventListener('click', e => {
     if (inputName.value == '' || inputEmail.value == '' || inputTel.value == '') {
@@ -123,6 +124,10 @@ formGetBook.addEventListener('click', e => {
     } else {
         window.location.href = 'html/checkout.html';
     }
+})
+
+btnBack.addEventListener('click', e => {
+  window.location.href = 'index.html';
 })
 
 // We obtain the current theme that the interface has by validating the dark-theme class
