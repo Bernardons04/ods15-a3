@@ -618,7 +618,7 @@ the website, in dark theme
   padding: 10px;
   background-color: #00000099;
   backdrop-filter: blur(2px);
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 1rem;
   font-family: 'Nunito', sans-serif;
 }
