@@ -1375,6 +1375,12 @@ fieldset {
   }
 }
 
+@media screen and (max-width: 760px) {
+  .contact__data{
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 556px) {
   .odsTitleContainer {
     max-width: 500px;
