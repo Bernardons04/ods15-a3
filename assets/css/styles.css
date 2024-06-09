@@ -1220,10 +1220,10 @@ fieldset {
 
 @media screen and (max-width: 486px){
   .about__description {
-    width: 75%;
+    width: 80%;
   }
   .home__description {
-    width: 390px;
+    max-width: 400px;
   }
 }
 
@@ -1238,8 +1238,14 @@ fieldset {
   .odsImg img {
     max-width: 140px;
   }
+  .about__description {
+    width: 74%;
+  }
   .questions__title {
     font-size: 1.2rem;
+  }
+  .home__description {
+    max-width: 350px;
   }
 }
 
@@ -1252,6 +1258,9 @@ fieldset {
   }
   .odsTitleContainer {
     max-width: 350px !important;
+  }
+  .home__description {
+    max-width: 300px;
   }
 }
 
@@ -1313,6 +1322,7 @@ fieldset {
   .footer__subscribe{
     width: initial;
   }
+
 }
 
 @media screen and (max-width: 992px){
