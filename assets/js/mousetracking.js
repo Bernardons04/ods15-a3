@@ -2,10 +2,13 @@ document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const front = card.querySelector('.front');
     const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
+    const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+    const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
 
-    front.style.transform = `rotateY(${x * 0.05}deg) rotateX(${-y * 0.05}deg) rotateY(180deg)`;
+    const rotateX = y * 20; // Ajuste a intensidade conforme necessário
+    const rotateY = x * 20;  // Ajuste a intensidade conforme necessário
+
+    front.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) rotateY(180deg)`;
   });
 
   card.addEventListener('mouseleave', () => {
