@@ -189,6 +189,7 @@ the website, in dark theme
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section{
   padding: 5.5rem 0 1rem;
+
 }
 
 .section__title,
@@ -436,6 +437,9 @@ the website, in dark theme
 }
 
 /*=============== ABOUT ===============*/
+#about {
+  min-height: 100vh;
+}
 .about__container{
   row-gap: 2rem;
 }
