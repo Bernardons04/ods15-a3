@@ -216,7 +216,7 @@ the website, in dark theme
 
 /*=============== MODAL ===============*/
 .modal {
-  display: flex;
+  display: none;
   flex-direction: column; 
   position: fixed; 
   z-index: 1000;
