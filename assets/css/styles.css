@@ -211,9 +211,112 @@ the website, in dark theme
 }
 
 .main{
-  overflow: hidden; /*For animation*/
+  overflow: hidden;
 }
 
+/*=============== MODAL ===============*/
+.modal {
+  display: flex;
+  flex-direction: column; 
+  position: fixed; 
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.spanEmphasis {
+  color: var(--first-color);
+  font-weight: bold;
+}
+
+.dark-theme .modal-content {
+  background-color: hsl(152, 0%, 100%);
+  color: black;
+}
+
+.modal-content {
+  background-color: hsl(152, 8%, 12%);
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translateY(-60%);
+  margin: auto;
+  padding: 50px;
+  width: 500px;
+  border-radius: 30px;
+}
+
+.titleContentModal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.titleContentModal h2 {
+  font-weight: var(--font-semi-bold);
+  color: var(--first-color);
+  font-size: 30px;
+}
+
+.close {
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  transition: .4s;
+}
+
+.modalText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--first-color);
+  transform: scale(1.3);
+}
+
+header {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+    padding: 40px;
+  }
+  .modalText {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .modalText {
+    font-size: 14px;
+  }
+  .titleContentModal h2 {
+    font-size: 25px;
+  }
+  .close {
+    font-size: 30px;
+  }
+}
 /*=============== HEADER ===============*/
 .header{
   width: 100%;
@@ -1130,16 +1233,22 @@ fieldset {
 /*=============== SCROLL UP ===============*/
 .scrollup{
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 18px;
   background-color: var(--first-color);
   right: 1rem;
-  bottom: -30%;
+  bottom: 3rem;
   display: inline-flex;
-  padding: .5rem;
-  border-radius: .25rem;
+  padding: 1rem;
+  border-radius: 50px;
   z-index: var(--z-tooltip);
-  opacity: .8;
+  color: rgb(0, 0, 0);
   transition: .4s;
   animation: float 2s ease-in-out infinite;
+  text-decoration: none;
 }
 
 .scrollup__icon{
@@ -1150,11 +1259,7 @@ fieldset {
 .scrollup:hover{
   background-color: var(--first-color-alt);
   opacity: 1;
-}
-
-/* Show Scroll Up*/
-.show-scroll{
-  bottom: 3rem;
+  color: white;
 }
 
 /*=============== SCROLL BAR ===============*/
