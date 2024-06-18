@@ -191,8 +191,9 @@ the website, in dark theme
 }
 
 .container{
-  max-width: 1100px;
+  width: 1100px;
   margin: 0 auto;
+  max-width: 100%;
   padding: 0 2rem;
 }
 
@@ -1238,7 +1239,7 @@ fieldset {
 .scrollup{
   position: fixed;
   max-width: 100%;
-  margin: 2rem;
+  margin: 2rem .5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1276,6 +1277,10 @@ fieldset {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 350px){
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
   .home__title{
     font-size: var(--h1-font-size);
   }
@@ -1315,6 +1320,7 @@ fieldset {
 
 @media screen and (max-width: 576px){
   .container {
+    max-width: 95%;
     margin: .8rem;
   }
 }
@@ -1518,6 +1524,10 @@ fieldset {
 
 /* For large devices */
 @media screen and (min-width: 992px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
   .section{
     padding: 8rem 0 1rem;
   }
