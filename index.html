@@ -24,7 +24,7 @@
 <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
-        <nav class="nav container">
+        <nav class="nav">
             <a href="#" class="nav__logo">
                 <img src="assets/img/LeafHeader.png" alt="" class="leafHeader"> Leitura <br> sustentável
             </a>
@@ -106,9 +106,9 @@
         </section>
 
         <!--==================== ABOUT ====================-->
-        <section class="about section container" id="about">
-            <div class="about__container grid">
-                <div>
+        <section class="about" id="about">
+            <div class="about__container">
+                <div class="divOpenBook">
                     <model-viewer class="bookOpen" src="assets/img/Livro Aberto Cena.glb" camera-controls
                         camera-orbit="45deg 50deg" disable-zoom auto-rotate shadow-intensity="1">
                     </model-viewer>
@@ -777,7 +777,7 @@
         <p>
             Saiba mais
         </p>
-        <svg viewBox="0 0 256 256" fill="currentColor" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 256 256" fill="currentColor" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
             <rect fill="none" height="256" width="256"></rect>
             <circle stroke-width="16" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" fill="none"
                 r="96" cy="128" cx="128"></circle>
