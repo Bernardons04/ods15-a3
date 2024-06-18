@@ -3,6 +3,8 @@ const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
 
+const buttonFixed = document.getElementById('scroll-up')
+
 /*===== MENU SHOW =====*/
 if (navToggle) {
     navToggle.addEventListener('click', () => {
@@ -149,7 +151,7 @@ const sr = ScrollReveal({
     delay: 400
 })
 
-sr.reveal(`.home__data`)
+sr.reveal(`.home__data, #scroll-up', model-viewer`, { origin: 'left', delay: 500 })
 sr.reveal(`.home__img`, { delay: 500 })
 sr.reveal(`.home__social`, { delay: 600 })
 sr.reveal(`.about__img, .contact__box`, { origin: 'left' })

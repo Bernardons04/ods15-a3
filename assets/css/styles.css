@@ -1339,12 +1339,20 @@ fieldset {
   .home__description {
     max-width: 400px;
   }
+  .scrollup{
+    font-size: 15px;
+    padding: .7rem;
+  }
 }
 
 @media screen and (max-width: 420px) {
   model-viewer {
     width: 400px;
     height: 400px;
+  }
+  .bookOpen {
+    width: 380px;
+    height: 380px;
   }
   .odsTitleContainer {
     max-width: 360px !important;
