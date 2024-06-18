@@ -82,11 +82,9 @@ textarea{
 
 body{
   margin: var(--header-height) 0 0 0;
-  color: var(--text-color);
   background-color: var(--body-color);
+  color: var(--text-color);
   transition: .4s;
-  align-items: center;
-  max-width: 100%;
 }
 
 button{
@@ -175,7 +173,6 @@ the website, in dark theme
   transform: scale(1.1);
 }
 
-
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section{
   padding: 5.5rem 0 1rem;
@@ -191,13 +188,17 @@ the website, in dark theme
 }
 
 .container{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: 1000px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
 }
 
 .grid{
   display: grid;
+}
+
+.main{
+  overflow: hidden;
 }
 
 /*=============== MODAL ===============*/
@@ -335,6 +336,7 @@ header {
   letter-spacing: -1px;
   display: inline-flex;
   align-items: center;
+  column-gap: .5rem;
   transition: .3s;
 }
 
@@ -457,14 +459,12 @@ model-viewer {
 .home__description{
   margin-bottom: var(--mb-2-5);
   text-align: justify;
-  max-width: 95%;
 }
 
 .home__social{
   position: absolute;
   top: 2rem;
   right: -1rem;
-  margin-right: 1rem;
   display: grid;
   justify-items: center;
   row-gap: 3.5rem;
@@ -571,9 +571,6 @@ model-viewer {
   margin-bottom: var(--mb-2);
   text-align: justify;
 }
-
-
-
 
 .about__details{
   margin-bottom: var(--mb-2-5);
@@ -924,7 +921,8 @@ model-viewer {
 .odsTitleContainer {
   display: flex;
   gap: 2rem;
-  width: 1000px;
+  max-width: 100%;
+  width: 900px;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
@@ -1237,23 +1235,27 @@ fieldset {
 /*=============== SCROLL UP ===============*/
 .scrollup{
   position: fixed;
-  max-width: 100%;
-  margin: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  font-size: 17px;
+  font-size: 18px;
   background-color: var(--first-color);
-  right: 3rem;
+  right: 1rem;
   bottom: 3rem;
-  padding: .8rem;
+  display: inline-flex;
+  padding: 1rem;
   border-radius: 50px;
   z-index: var(--z-tooltip);
   color: rgb(0, 0, 0);
   transition: .4s;
   animation: float 2s ease-in-out infinite;
   text-decoration: none;
+}
+
+.scrollup__icon{
+  font-size: 1rem;
+  color: #FFF;
 }
 
 .scrollup:hover{
@@ -1276,6 +1278,11 @@ fieldset {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 350px){
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
   .home__title{
     font-size: var(--h1-font-size);
   }
@@ -1314,12 +1321,20 @@ fieldset {
 }
 
 @media screen and (max-width: 576px){
+  .about__description {
+    width: 100%;
+  }
+
   .container {
+    max-width: 95%;
     margin: .8rem;
   }
 }
 
 @media screen and (max-width: 486px){
+  .about__description {
+    width: 100%;
+  }
   .home__description {
     max-width: 400px;
   }
@@ -1334,15 +1349,20 @@ fieldset {
     width: 350px;
     height: 350px;
   }
+
+  .viewerResponsive {
+    width: 280px !important;
+  }
+
   .bookOpen {
     width: 380px;
     height: 380px;
   }
-  .odsTitleContainer {
-    max-width: 360px !important;
-  }
   .odsImg img {
     max-width: 140px;
+  }
+  .about__description {
+    width: 100%;
   }
   .questions__title {
     font-size: 1.2rem;
@@ -1353,8 +1373,12 @@ fieldset {
 }
 
 @media screen and (max-width: 386px){
-  .odsTitleContainer {
-    max-width: 350px !important;
+  .about__description {
+    width: 100%;
+  }
+  .about__title{
+    max-width: 100%;
+    font-size: 25px !important;
   }
   .home__description {
     max-width: 300px;
@@ -1363,7 +1387,14 @@ fieldset {
 
 @media screen and (max-width: 1000px) {
   .questions__objective {
-    width: 95%;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -1374,6 +1405,7 @@ fieldset {
 
   .nav{
     height: calc(var(--header-height) + 1.5rem);
+    margin: 20px auto;
   }
   .nav__toggle,
   .nav__close{
@@ -1388,6 +1420,7 @@ fieldset {
   }
 
   .home__container,
+  .about__container,
   .questions__container,
   .contact__container,
   .footer__container{
@@ -1425,7 +1458,7 @@ fieldset {
     font-size: 1.5rem !important;
   }
   .questions__objective {
-    width: 70%;
+    width: 90%;
   }
   .odsImg img {
     width: 400px;
@@ -1438,38 +1471,33 @@ fieldset {
     flex-direction: column;
   }
   .about__data {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 
 @media screen and (max-width: 850px) {
   .questions__title {
     font-size: 1.5rem !important;
-    width: 60%;
-  }
-  .questions__objective {
-    width: 60%;
-  }
-  .odsTitleContainer {
-    gap: 1rem;
-    margin: 0 2rem;
   }
 }
 
 @media screen and (max-width: 730px) {
   .questions__title {
     font-size: 1.5rem !important;
-    width: 100%;
+    max-width: 90%;
     text-align: center;
   }
   .questions__objective {
     width: 100%;
     text-align: center;
   }
+
   .odsTitleContainer {
     flex-direction: column;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto !important;
+    padding: 0 1rem;
+    align-items: center;
     padding: 0 1rem;
   }
   .odsImg img {
@@ -1478,9 +1506,6 @@ fieldset {
 }
 
 @media screen and (max-width: 612px) {
-  .odsTitleContainer {
-    max-width: 550px;
-  }
   .odsImg img {
     max-width: 250px;
   }
@@ -1493,18 +1518,12 @@ fieldset {
 }
 
 @media screen and (max-width: 556px) {
-  .odsTitleContainer {
-    max-width: 500px;
-  }
   .odsImg img {
     max-width: 200px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .odsTitleContainer {
-    max-width: 415px;
-  }
   .odsImg img {
     max-width: 170px;
   }
@@ -1518,6 +1537,11 @@ fieldset {
 
 /* For large devices */
 @media screen and (min-width: 992px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .section{
     padding: 8rem 0 1rem;
   }
@@ -1606,6 +1630,14 @@ fieldset {
   }
   .home__social-link{
     font-size: 1.15rem;
+  }
+
+  .about__container{
+    column-gap: 7rem;
+  }
+
+  .scrollup{
+    right: 3rem;
   }
 }
 
