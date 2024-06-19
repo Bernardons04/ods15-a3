@@ -12,7 +12,7 @@
 
 ### A landing page inclui diversas interatividades, como modo dark/light, cards com mouse tracking e um modal informativo.
 
-http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
 
 ## 🎯Objetivo do projeto
 
