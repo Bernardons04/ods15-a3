@@ -1401,7 +1401,6 @@ fieldset {
 
   .nav{
     height: calc(var(--header-height) + 1.5rem);
-    margin: 20px auto;
   }
   .nav__toggle,
   .nav__close{
