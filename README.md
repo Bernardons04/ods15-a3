@@ -36,5 +36,5 @@
 ## <p align="center">📱Interface</p>
 
 <p align="center">
-<img src="assets/img/imageLandingPage.png" width="450px" align="center">
+<img src="assets/img/imageLandingPage.png" width="600px" align="center">
 </p>
