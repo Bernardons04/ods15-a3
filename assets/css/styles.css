@@ -428,26 +428,24 @@ header {
 
 .home__container{
   position: relative;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
   row-gap: 2rem;
-}
-
-.divOpenBook {
-  width: 500;
+  padding: 0 1rem !important;
 }
 
 .home__img, .divOpenBook{
   justify-self: center;
   margin: 0 auto;
-  overflow: hidden;
   max-width: 100%;
 }
 
 model-viewer {
   overflow-x: hidden;
-  text-align: center;
   width: 500px;
   height: 500px;
-  margin-right: 10px;
 }
 
 .home__title{
@@ -458,7 +456,6 @@ model-viewer {
 
 .home__description{
   margin-bottom: var(--mb-2-5);
-  text-align: justify;
 }
 
 .home__social{
@@ -544,7 +541,6 @@ model-viewer {
 
 /*=============== ABOUT ===============*/
 #about {
-  min-height: 100vh;
   max-width: 100%;
 }
 .about__container{
@@ -556,6 +552,7 @@ model-viewer {
   justify-content: space-around;
   max-width: 1100px;
   margin: 0 auto 2rem;
+  padding: 6rem 1rem;
 }
 
 .about__data {
@@ -569,7 +566,6 @@ model-viewer {
 
 .about__description{
   margin-bottom: var(--mb-2);
-  text-align: justify;
 }
 
 .about__details{
@@ -816,7 +812,6 @@ model-viewer {
 
 .steps__card-description {
   font-size: var(--small-font-size);
-  text-align: justify;
 }
 
 .steps__card:hover .steps__card-number {
@@ -921,14 +916,9 @@ model-viewer {
 .odsTitleContainer {
   display: flex;
   gap: 2rem;
-  max-width: 100%;
-  width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 2rem;
-}
-
-.questions__objective {
-  text-align: justify;
 }
 
 .questions__title {
@@ -1223,6 +1213,11 @@ fieldset {
 
 .footer__card{
   width: 35px;
+  transition: .3s;
+}
+
+.footer__card:hover {
+  transform: translateY(-.25rem);
 }
 
 .footer__copy{
@@ -1327,7 +1322,7 @@ fieldset {
 
   .container {
     max-width: 95%;
-    margin: .8rem;
+    margin: 0 .8rem;
   }
 }
 
@@ -1345,25 +1340,23 @@ fieldset {
 }
 
 @media screen and (max-width: 420px) {
-  model-viewer {
-    width: 350px;
-    height: 350px;
+  .modal-content {
+    padding: 20px;
   }
-
-  .viewerResponsive {
-    width: 300px !important;
-  }
-
   .odsImg img {
     max-width: 140px;
   }
   .about__description {
     width: 100%;
   }
+  .about__container {
+    padding: 0 1rem !important;
+    gap: 0;
+  }
   .questions__title {
     font-size: 1.2rem;
   }
-  .home__description {
+  .home__description{
     max-width: 350px;
   }
 }
@@ -1376,7 +1369,7 @@ fieldset {
     max-width: 100%;
     font-size: 25px !important;
   }
-  .home__description {
+  .home__description{
     max-width: 300px;
   }
 }
@@ -1391,6 +1384,9 @@ fieldset {
   .header {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .home__container {
+    flex-direction: column;
   }
 }
 
@@ -1424,9 +1420,6 @@ fieldset {
   
   .home{
     padding: 10rem 0 5rem;
-  }
-  .home__container{
-    align-items: center;
   }
   .home__img{
     order: 1;
@@ -1474,6 +1467,10 @@ fieldset {
   .questions__title {
     font-size: 1.5rem !important;
   }
+  model-viewer {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 @media screen and (max-width: 730px) {
@@ -1481,6 +1478,7 @@ fieldset {
     font-size: 1.5rem !important;
     max-width: 90%;
     text-align: center;
+    margin: 0 auto;
   }
   .questions__objective {
     width: 100%;
@@ -1490,10 +1488,9 @@ fieldset {
   .odsTitleContainer {
     flex-direction: column;
     max-width: 100%;
-    margin: 0 auto !important;
+    margin: 0 auto;
     padding: 0 1rem;
     align-items: center;
-    padding: 0 1rem;
   }
   .odsImg img {
     max-width: 250px;
@@ -1527,6 +1524,11 @@ fieldset {
   }
   .questions__objective {
     font-size: 14px !important;
+  }
+  model-viewer {
+    max-width: 100%;
+    height: 350px;
+    margin: 0 auto;
   }
 }
 
@@ -1626,11 +1628,6 @@ fieldset {
   .home__social-link{
     font-size: 1.15rem;
   }
-
-  .about__container{
-    column-gap: 7rem;
-  }
-
   .scrollup{
     right: 3rem;
   }
@@ -1639,9 +1636,5 @@ fieldset {
 @media screen and (max-width: 1350px) {
   .about__title {
     font-size: 30px;
-  }
-  .bookOpen, .home__img model-viewer {
-    width: 450px;
-    height: 450px;
   }
 }
