@@ -5,9 +5,8 @@ document.querySelectorAll('.card').forEach(card => {
     const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
     const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
 
-    const rotateX = y * 20; // Ajuste a intensidade conforme necessário
-    const rotateY = x * 40;  // Ajuste a intensidade conforme necessário
-
+    const rotateX = y * 20;
+    const rotateY = x * 40;
     front.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) rotateY(180deg)`;
   });
 
